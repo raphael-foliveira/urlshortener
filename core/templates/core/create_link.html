@@ -1,0 +1,15 @@
+{% extends "base/base.html" %}
+
+{% block title %} Create link{% endblock %}
+
+
+{% block content %}
+<h3><a href="{% url 'core:list_links' %}">Home</a></h3>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <label for="originalUrl">Original Link:</label>
+    <input type="text" id="originalUrl" name="original_url">
+    <button type="submit">Shorten</button>
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% block css_links %}
+{% endblock %}
+
+<div class="single-link">
+    <form action="{% url 'core:delete_link' link_id=link.id %}" method="POST">
+        {% csrf_token %}
+        <p>Original Url: {{link.original_url}}</p>
+        <p>Shortened Url: {{ link.short_url }}</p>
+        <button type="submit">Delete</button>
+    </form>
+</div>

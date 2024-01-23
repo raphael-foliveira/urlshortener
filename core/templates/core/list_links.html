@@ -1,0 +1,14 @@
+{% extends "base/base.html" %}
+
+{% block title %} List Links {% endblock %}
+
+
+{% block content %}
+<h1>List Links works!</h1>
+<h3><a href="{% url 'core:create_link' %}">Shorten a new URL</a></h3>
+
+{% for link in links %}
+{% include "core/partials/single_link.html" with link=link %}
+{% endfor %}
+
+{% endblock %}

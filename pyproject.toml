@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "link-shortener"
+version = "0.1.0"
+description = ""
+authors = ["Raphael Oliveira <raphael.foliveira1@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.0.1"
+pytest-django = "^4.7.0"
+pytest-cov = "^4.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
